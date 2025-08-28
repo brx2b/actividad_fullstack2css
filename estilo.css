@@ -1,0 +1,82 @@
+*{margin: 0;
+}
+.layout{
+    display: grid;
+
+    grid-template-areas: 
+    "arriba arriba"
+    "menu principal"
+    "pata pata"
+    ;
+
+    grid-template-columns: 200px 1fr;
+
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100vh;
+
+    .arriba{
+        grid-area: arriba;
+        background-color: wheat;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        
+    }
+    .logo{
+        grid-column: 1;
+    }
+    .titulo{
+        grid-column: 2;
+        text-align: center;
+    }
+    .menu{
+        grid-area: menu;
+        background-color: rgba(243, 83, 222, 0.6);
+        color: black;
+        font-size: 30px;
+        
+    }
+    .principal{
+
+        grid-area: principal;
+        background-color: rgb(143, 220, 223);
+        display: grid;
+        
+        padding: 20px;
+        grid-template-columns: repeat(3,1fr);
+        text-align: center;
+
+        .tarjeta2{
+            border-right: solid black 5px;
+            border-left: solid black 5px;
+        }
+
+    }
+    
+    .pata{
+        grid-area: pata;
+        padding: 20px;
+        border-top: solid white 5px;
+        background-color: rgb(3, 3, 3);
+        color: white;
+        grid-template-columns: 100px 100px auto 500px;
+        display: grid;
+        text-align: center;
+    }
+    #contacto{
+        grid-column: 4;
+    }
+}
+a{
+    color: black;
+}
+.logo{
+    margin-left: 40px;
+}
+ol{
+    margin-top: 40px;
+}
+li{
+    margin-top: 20px;
+}
